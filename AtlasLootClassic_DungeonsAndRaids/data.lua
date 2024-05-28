@@ -905,29 +905,43 @@ data["TheStockade"] = {
 	AtlasMapFile_AL = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	-- check level range in-game i think based on wowhead it's {15, 22, 30}
 	LevelRange = GetForVersion({15, 24, 32}, {15, 23, 29}),
 	items = {
-		{ -- SWStKamDeepfury
-			name = AL["Kam Deepfury"],
-			npcID = 1666,
-			Level = GetForVersion(27, 25),
-			DisplayIDs = {{825}},
-			AtlasMapBossID = 2,
+		{ -- SWStRandolphMoloch
+			name = AL["Randolph Moloch"],
+			npcID = 46383,
+			Level = 25,
+			DisplayIDs = {{35068}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
-				{ 1,  2280 }, -- Kam's Walking Stick
+				{ 1,  63345 }, -- Noble's Robe
+				{ 2,  63344 }, -- Standard Issue Prisoner Shoes
+				{ 3,  63346 }, -- Wicked Dagger
 			},
 		},
-		{ -- SWStBruegalIronknuckle
-			name = AL["Bruegal Ironknuckle"],
-			npcID = 1720,
-			Level = GetForVersion(26, 25),
-			DisplayIDs = {{2142}},
-			AtlasMapBossID = 6,
-			specialType = "rare",
+		{ -- SWStLordOverheat
+			name = AL["Lord Overheat"],
+			npcID = 46264,
+			Level = 25,
+			DisplayIDs = {{1204}},
+			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
-				{ 1,  3228 }, -- Jimmied Handcuffs
-				{ 2,  2941 }, -- Prison Shank
-				{ 3,  2942 }, -- Iron Knuckles
+				{ 1,  1929 }, -- Silk-Threaded Trousers
+				{ 2,  5967 }, -- Girdle of Nobility
+				{ 3,  4676 }, -- skeletal-gauntlets
+			},
+		},
+		{ -- SWStHogger
+			name = AL["Hogger"],
+			npcID = 46254,
+			Level = 25,
+			DisplayIDs = {{501}},
+			AtlasMapBossID = 2,
+			[NORMAL_DIFF] = {
+				{ 1,  2168 }, -- Corpse Rompers
+				{ 2,  1934 }, -- Hogger's Trousers
+				{ 3,  1959 }, -- Cold Iron Pick
 			},
 		},
 		{ -- SWStTrash
@@ -935,6 +949,9 @@ data["TheStockade"] = {
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  1076 }, -- Defias Renegade Ring
+				-- Need to test in-game but these might be boss drops even though WoW head considers them zone-drop
+				{ 3,  4676 }, -- Skeletal Gauntlets
+				{ 4,  1959 }, -- Cold Iron Pick
 			},
 		},
 	},
